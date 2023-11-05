@@ -1,0 +1,55 @@
+#include <iostream>
+#include <unistd.h>
+using namespace std;
+
+int main()
+{
+    int n, a, b;
+    cout<<".......Welcome to the calculator......."<<endl;
+    usleep(800000);
+    cout<<"1. Addition"<<endl<<"2. Subtraction"<<endl<<"3. Division"<<endl<<"4. Multiplication"<<endl;
+    usleep(800000);
+    cout<<"Enter the option number to perform the desired operation from the options above:";
+    cin>>n;
+    usleep(400000);
+        switch(n){
+            case 1:
+                cout<<"Enter first addend: ";
+                cin>>a;
+                cout<<"Enter second addend: ";
+                cin>>b;
+                cout<<"Sum: "<<a+b;
+                break;
+                
+            case 2:
+                cout<<"Enter minuend: ";
+                cin>>a;
+                cout<<"Enter subtrahend: ";
+                cin>>b;
+                cout<<"Difference: "<<a-b;
+                break;
+            
+            case 3:
+                cout<<"Enter dividend: ";
+                cin>>a;
+                cout<<"Enter divisor: ";
+                cin>>b;
+                cout<<"Quotient: "<<a/b;
+                break;
+            
+            case 4:
+                cout<<"Enter multiplicand: ";
+                cin>>a;
+                cout<<"Enter multiplier: ";
+                cin>>b;
+                cout<<"Product: "<<a*b;
+                break;
+                
+            default:
+                cout<<"Invalid option!!"<<endl;
+                break;
+        
+        }
+    
+    return 0;
+}
