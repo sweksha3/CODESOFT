@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+    cout<<"******Guess Number Game******"<<endl;
+    int a,g,r,t=0;
+    srand(time(0));
+    cout<<"Enter the range in which you want to play: ";
+    cin>>r;
+    a = rand() % r + 1;
+    do
+    {
+        cout << "Enter a guess number: ";
+        cin >> g;
+        t++;
+        if (g > a)
+            cout << "Too high!\n\n";
+        else if (g < a)
+            cout << "Too low!\n\n";
+        else
+            cout << "\nCorrect! You got it in " << t<< " guesses!\n";
+    } while (g != a);
+    return 0;
+}
